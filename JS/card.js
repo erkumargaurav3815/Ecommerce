@@ -10,7 +10,7 @@ fetch("../products.json")
     data.forEach((product) => {
       html += `
     <div class="col">
-      <div class="card h-100 shadow-sm">
+   <div class="card h-100 shadow-sm border-0 rounded-4">
 
         <img
           src="${product.image}"

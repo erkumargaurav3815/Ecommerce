@@ -3,7 +3,6 @@ function showCard() {
 
   document.getElementById("overlay").classList.remove("d-none");
 
-  // Disable background scrolling
   document.body.style.overflow = "hidden";
 }
 
@@ -12,6 +11,5 @@ function closeCard() {
 
   document.getElementById("overlay").classList.add("d-none");
 
-  // Enable scrolling again
   document.body.style.overflow = "auto";
 }

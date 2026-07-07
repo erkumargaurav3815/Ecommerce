@@ -16,6 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   </head>
   <script src="../JS/card.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <body>
     <nav class="navbar navbar-expand-lg sticky-top bg-light">
       <div class="container">
@@ -93,11 +94,11 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-3 g-4">
         <div class="col">
-          <!-- Product Card -->
           <div class="card" style="width: 18rem">
             <img
               src="../assets/images/shirt-card.jpeg"
               class="card-img-top"
+              style="width: 100%; height: 320px; object-fit: cover"
               alt="Shirt" />
 
             <div class="card-body">
@@ -110,24 +111,21 @@
               <button class="btn btn-primary" onclick="showCard()">More</button>
             </div>
           </div>
-          <!-- Background Overlay -->
+
           <div
             id="overlay"
             class="position-fixed top-0 start-0 w-100 h-100 d-none"
-            style="
-              backdrop-filter: blur(5px);
-              background: rgba(0, 0, 0, 0.3);
-              z-index: 9998;
-            "></div>
-          <!-- Separate Details Card -->
+            style="backdrop-filter: blur(5px); z-index: 9999"></div>
+
           <div
             id="detailsCard"
             class="position-fixed top-50 start-50 translate-middle d-none"
-            style="width: 350px; z-index: 9999">
+            style="width: 350px; z-index: 10000">
             <div class="card shadow">
               <img
                 src="../assets/images/shirt-card.jpeg"
                 class="card-img-top"
+                style="width: 100%; height: 400px; object-fit: cover"
                 alt="Shirt" />
 
               <div class="card-body text-center">

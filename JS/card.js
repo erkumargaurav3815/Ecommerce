@@ -130,11 +130,12 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     phone: this.phone.value,
     message: this.message.value,
   };
-
+  //receive array from local storage or return empty array
   let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 
   contacts.push(contact);
 
+  //convert array -> json
   localStorage.setItem("contacts", JSON.stringify(contacts));
 
   document.getElementById("showName").textContent = contact.name;
@@ -149,10 +150,4 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 document.getElementById("closeBox").addEventListener("click", function () {
   document.getElementById("displayBox").style.display = "none";
-});
-
-document.getElementById("displayBox").addEventListener("click", function (e) {
-  if (e.target === this) {
-    this.style.display = "none";
-  }
 });

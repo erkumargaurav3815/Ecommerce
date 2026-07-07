@@ -9,36 +9,37 @@ fetch("../products.json")
 
     data.forEach((product) => {
       html += `
-        <div class="col">
-          <div class="card" style="width:18rem">
+    <div class="col">
+      <div class="card h-100 shadow-sm">
 
-            <img src="${product.image}"
-            class="card-img-top"
-            style="height:320px;object-fit:cover">
+        <img
+          src="${product.image}"
+          class="card-img-top img-fluid "
+          style="height:400px"
+          alt="${product.name}">
 
-            <div class="card-body">
+        <div class="card-body d-flex flex-column">
 
-              <h5 class="card-title">
-                ${product.name}
-              </h5>
+          <h5 class="card-title">${product.name}</h5>
 
-              <p class="card-text text-truncate">
-                ${product.description}
-              </p>
+          <p class="card-text text-truncate">
+            ${product.description}
+          </p>
 
-              <button class="btn btn-primary"
-              onclick="showCard(${product.id})">
-                More
-              </button>
+          <button
+            class="btn btn-primary mt-auto"
+            onclick="showCard(${product.id})">
+            More
+          </button>
 
-            </div>
-
-          </div>
         </div>
-      `;
+
+      </div>
+    </div>
+  `;
     });
 
-    document.getElementById("productList").innerHTML = html;
+    document.getElementById("productList").innerHTML = html; //all cards display (#productList)
   })
   .catch((error) => console.log(error));
 

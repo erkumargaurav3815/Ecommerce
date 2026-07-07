@@ -47,18 +47,18 @@
             </li>
           </ul>
         </div>
-        <form class="d-flex" role="search">
+        <!-- <form class="d-flex" role="search">
           <input
             class="form-control me-2"
             type="search"
             placeholder="Search"
             aria-label="Search" />
           <button class="btn btn-outline-primary" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </nav>
 
-    <div class="hero bg-secondary-subtle p-4">
+    <!-- <div class="hero bg-secondary-subtle p-4">
       <div class="row justify-content-center align-items-center">
         <div class="col-12 col-sm-12 col-md-3">
           <img
@@ -79,6 +79,36 @@
             src="../assets/images/item3.jpeg"
             alt="Item 3"
             class="img-fluid rounded shadow hero-img vh-100" />
+        </div>
+      </div>
+    </div> -->
+
+    <div class="hero bg-secondary-subtle py-5">
+      <div class="container">
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-sm-12 col-md-4">
+            <img
+              src="../assets/images/item1.jpeg"
+              alt="Item 1"
+              class="img-fluid rounded shadow hero-img w-100"
+              style="height: 600px" />
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4">
+            <img
+              src="../assets/images/item2.jpeg"
+              alt="Item 2"
+              class="img-fluid rounded shadow hero-img w-100"
+              style="height: 600px" />
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4">
+            <img
+              src="../assets/images/item3.jpeg"
+              alt="Item 3"
+              class="img-fluid rounded shadow hero-img w-100"
+              style="height: 600px" />
+          </div>
         </div>
       </div>
     </div>
@@ -151,21 +181,24 @@
       </div>
     </div> -->
 
-    <div class="shopping-card">
-      <div class="shopping-card py-5" id="shopping-card">
-        <h1 class="mb-4 text-primary">Shop</h1>
+    <div class="shopping-card py-5">
+      <div class="container">
+        <h1 class="text-center text-primary mb-4">Shop</h1>
+
         <div
           id="productList"
-          class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"></div>
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 g-4"></div>
       </div>
+
       <div
         id="overlay"
         class="position-fixed top-0 start-0 w-100 h-100 d-none"
         style="backdrop-filter: blur(5px); z-index: 9999"></div>
+
       <div
         id="detailsCard"
-        class="position-fixed top-50 start-50 translate-middle d-none"
-        style="width: 350px; z-index: 10000"></div>
+        class="position-fixed top-50 start-50 translate-middle d-none w-100 px-3"
+        style="max-width: 500px; z-index: 10000"></div>
     </div>
     <script src="../JS/card.js"></script>
   </body>

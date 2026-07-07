@@ -1,4 +1,108 @@
-function showCard() {
+let products = [];
+
+fetch("../products.json")
+  .then((response) => response.json())
+  .then((data) => {
+    products = data;
+
+    let html = "";
+
+    data.forEach((product) => {
+      html += `
+        <div class="col">
+          <div class="card" style="width:18rem">
+
+            <img src="${product.image}"
+            class="card-img-top"
+            style="height:320px;object-fit:cover">
+
+            <div class="card-body">
+
+              <h5 class="card-title">
+                ${product.name}
+              </h5>
+
+              <p class="card-text text-truncate">
+                ${product.description}
+              </p>
+
+              <button class="btn btn-primary"
+              onclick="showCard(${product.id})">
+                More
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+      `;
+    });
+
+    document.getElementById("productList").innerHTML = html;
+  })
+  .catch((error) => console.log(error));
+
+function showCard(id) {
+  let product = products.find((p) => p.id === id);
+
+  if (!product) {
+    console.log("Product not found");
+    return;
+  }
+
+  document.getElementById("detailsCard").innerHTML = `
+
+    <div class="card shadow">
+
+      <img src="${product.image}"
+      class="card-img-top"
+      style="height:400px;object-fit:cover">
+
+      <div class="card-body text-center">
+
+        <h4 class="card-title">
+          ${product.name} Details
+        </h4>
+
+        <p class="card-text">
+          ${product.details}
+        </p>
+
+        <ul class="list-group mb-3 text-start">
+
+          <li class="list-group-item">
+            Material: ${product.material}
+          </li>
+
+          <li class="list-group-item">
+            Color: ${product.color}
+          </li>
+
+          <li class="list-group-item">
+            Size: ${product.size}
+          </li>
+
+          <li class="list-group-item">
+            Price: ${product.price}
+          </li>
+
+        </ul>
+
+        <button class="btn btn-success">
+          Add To Cart
+        </button>
+
+        <button class="btn btn-danger"
+        onclick="closeCard()">
+          Close
+        </button>
+
+      </div>
+
+    </div>
+
+  `;
+
   document.getElementById("detailsCard").classList.remove("d-none");
 
   document.getElementById("overlay").classList.remove("d-none");

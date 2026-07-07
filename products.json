@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Shirt",
+    "image": "../assets/images/card-1.jpeg",
+    "description": "Shirts are a versatile and essential part of any wardrobe.",
+    "details": "Premium cotton shirt for daily wear.",
+    "material": "Cotton",
+    "color": "Blue",
+    "size": "S, M, L, XL",
+    "price": "$50"
+  },
+  {
+    "id": 2,
+    "name": "Trouser",
+    "image": "../assets/images/card-2.jpeg",
+    "description": "Trousers are a versatile and essential part of any wardrobe.",
+    "details": "Premium cotton shirt for daily wear.",
+    "material": "Cotton",
+    "color": "Navy Blue",
+    "size": "S, M, L, XL",
+    "price": "$50"
+  },
+  {
+    "id": 3,
+    "name": "T-shirt",
+    "image": "../assets/images/card-3.jpeg",
+    "description": "T-shirts are a versatile and essential part of any wardrobe.",
+    "details": "Premium cotton shirt for daily wear.",
+    "material": "Cotton",
+    "color": "Orange",
+    "size": "S, M, L, XL",
+    "price": "$50"
+  },
+  {
+    "id": 4,
+    "name": "Lower",
+    "image": "../assets/images/card-4.jpeg",
+    "description": "Lowers are a versatile and essential part of any wardrobe.",
+    "details": "Premium cotton shirt for daily wear.",
+    "material": "Cotton",
+    "color": "Grey",
+    "size": "S, M, L, XL",
+    "price": "$50"
+  }
+]

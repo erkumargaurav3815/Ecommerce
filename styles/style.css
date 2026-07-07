@@ -1,0 +1,20 @@
+/* card */
+.card {
+  box-shadow: 5px 5px 15px #6d6f6d;
+}
+.card:hover {
+  /* box-shadow: 5px 5px 15px #28af03;
+  cursor: pointer;
+  transition: 0.3s ease; */
+}
+/* .scrollable-card-text {
+  max-height: 100px;
+  overflow-y: auto;
+} */
+.shopping-card {
+  margin: 0% 8%;
+}
+
+.card img {
+  height: 8%;
+}

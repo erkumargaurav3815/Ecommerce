@@ -67,35 +67,10 @@
       </div>
     </nav>
 
-    <!-- <div class="hero bg-secondary-subtle p-4">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-sm-12 col-md-3">
-          <img
-            src="../assets/images/item1.jpeg"
-            alt="Item 1"
-            class="img-fluid rounded shadow hero-img vh-100" />
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-3">
-          <img
-            src="../assets/images/item2.jpeg"
-            alt="Item 2"
-            class="img-fluid rounded shadow hero-img vh-100" />
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-3">
-          <img
-            src="../assets/images/item3.jpeg"
-            alt="Item 3"
-            class="img-fluid rounded shadow hero-img vh-100" />
-        </div>
-      </div>
-    </div> -->
-
     <div class="hero bg-secondary-subtle py-5">
       <div class="container">
-        <h1 style="color:rgb(78, 10, 225);">Starting &#x20B9 599/-</h1>
-        <h4 style="color:rgb(119, 107, 145);">Deals on fashion and beauty</h4>
+        <h1 style="color: rgb(78, 10, 225)">Starting @ Rs.599/-</h1>
+        <h4 style="color: rgb(119, 107, 145)">Deals on fashion and beauty</h4>
         <div class="row justify-content-center g-4">
           <div class="col-12 col-sm-12 col-md-4">
             <img
@@ -124,74 +99,6 @@
       </div>
     </div>
 
-    <!-- <div class="shopping-card py-5" id="shopping-card">
-      <div class="mb-4">
-        <div
-          class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-          <h1 class="mb-0 text-primary">Shop</h1>
-        </div>
-      </div>
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card" style="width: 18rem">
-            <img
-              src="../assets/images/shirt-card.jpeg"
-              class="card-img-top"
-              style="width: 100%; height: 320px; object-fit: cover"
-              alt="Shirt" />
-
-            <div class="card-body">
-              <h5 class="card-title">Shirt</h5>
-
-              <p class="card-text text-truncate">
-                Shirts are a versatile and essential part of any wardrobe.
-              </p>
-
-              <button class="btn btn-primary" onclick="showCard()">More</button>
-            </div>
-          </div>
-
-          <div
-            id="overlay"
-            class="position-fixed top-0 start-0 w-100 h-100 d-none"
-            style="backdrop-filter: blur(5px); z-index: 9999"></div>
-
-          <div
-            id="detailsCard"
-            class="position-fixed top-50 start-50 translate-middle d-none"
-            style="width: 350px; z-index: 10000">
-            <div class="card shadow">
-              <img
-                src="../assets/images/shirt-card.jpeg"
-                class="card-img-top"
-                style="width: 100%; height: 400px; object-fit: cover"
-                alt="Shirt" />
-
-              <div class="card-body text-center">
-                <h4 class="card-title">Shirt Details</h4>
-
-                <p class="card-text">Premium cotton shirt for daily wear.</p>
-
-                <ul class="list-group mb-3 text-start">
-                  <li class="list-group-item">Material: Cotton</li>
-                  <li class="list-group-item">Color: Blue</li>
-                  <li class="list-group-item">Size: S, M, L, XL</li>
-                  <li class="list-group-item">Price: $50</li>
-                </ul>
-
-                <button class="btn btn-success">Add To Cart</button>
-
-                <button class="btn btn-danger" onclick="closeCard()">
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="shopping-card py-5">
       <div class="container">
         <h4 class="text-primary mb-4">
@@ -215,6 +122,97 @@
         id="detailsCard"
         class="position-fixed top-50 start-50 translate-middle d-none w-100 px-3"
         style="max-width: 500px; z-index: 10000"></div>
+    </div>
+
+    <section class="py-5 bg-body-secondary">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow rounded-4">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="text-center fw-bold text-primary mb-4">
+                  Contact Us
+                </h3>
+
+                <form id="contactForm">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label fw-semibold"> Name </label>
+
+                      <input
+                        type="text"
+                        class="form-control form-control-lg rounded-3"
+                        name="name"
+                        required
+                        placeholder="Enter your name" />
+                    </div>
+
+                    <div class="col-md-6">
+                      <label class="form-label fw-semibold"> Email </label>
+
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control form-control-lg rounded-3"
+                        required
+                        placeholder="Enter your email" />
+                    </div>
+
+                    <div class="col-12">
+                      <label class="form-label fw-semibold">
+                        Phone Number
+                      </label>
+
+                      <input
+                        type="tel"
+                        class="form-control form-control-lg rounded-3"
+                        name="phone"
+                        placeholder="Enter phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                        oninput="
+                          this.value = this.value.replace(/[^0-9]/g, '')
+                        " />
+                    </div>
+
+                    <div class="col-12">
+                      <label class="form-label fw-semibold"> Message </label>
+
+                      <textarea
+                        class="form-control rounded-3"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message"
+                        style="resize: none"></textarea>
+                    </div>
+
+                    <div class="col-12">
+                      <button class="btn btn-primary btn-lg w-100 rounded-3">
+                        Send Message
+
+                        <i class="bi bi-send-fill ms-2"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="displayBox" class="display-box">
+      <div class="display-content">
+        <button id="closeBox" class="close-btn">&times;</button>
+
+        <h4 class="text-primary fw-bold mb-3">Contact Details</h4>
+
+        <p><strong>Name:</strong> <span id="showName"></span></p>
+        <p><strong>Email:</strong> <span id="showEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="showPhone"></span></p>
+        <p><strong>Message:</strong> <span id="showMessage"></span></p>
+      </div>
     </div>
     <script src="../JS/card.js"></script>
   </body>

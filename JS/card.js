@@ -1,3 +1,4 @@
+// card
 let products = [];
 
 fetch("../products.json")
@@ -118,3 +119,40 @@ function closeCard() {
 
   document.body.style.overflow = "auto";
 }
+
+// form
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const contact = {
+    name: this.name.value,
+    email: this.email.value,
+    phone: this.phone.value,
+    message: this.message.value,
+  };
+
+  let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+
+  contacts.push(contact);
+
+  localStorage.setItem("contacts", JSON.stringify(contacts));
+
+  document.getElementById("showName").textContent = contact.name;
+  document.getElementById("showEmail").textContent = contact.email;
+  document.getElementById("showPhone").textContent = contact.phone;
+  document.getElementById("showMessage").textContent = contact.message;
+
+  document.getElementById("displayBox").style.display = "flex";
+
+  this.reset();
+});
+
+document.getElementById("closeBox").addEventListener("click", function () {
+  document.getElementById("displayBox").style.display = "none";
+});
+
+document.getElementById("displayBox").addEventListener("click", function (e) {
+  if (e.target === this) {
+    this.style.display = "none";
+  }
+});

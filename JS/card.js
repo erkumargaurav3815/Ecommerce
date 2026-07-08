@@ -15,7 +15,7 @@ fetch("../products.json")
 
         <img
           src="${product.image}"
-          class="card-img-top img-fluid "
+          class="card-img-top img-fluid"
           style="height:400px"
           alt="${product.name}">
 
@@ -121,21 +121,47 @@ function closeCard() {
 }
 
 // form
+window.addEventListener("load", function () {
+  document.getElementById("contactForm").reset();
+});
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const contact = {
-    name: this.name.value,
-    email: this.email.value,
-    phone: this.phone.value,
-    message: this.message.value,
+    name: this.name.value.trim(),
+    email: this.email.value.trim(),
+    phone: this.phone.value.trim(),
+    message: this.message.value.trim(),
   };
-  //receive string from local storage and convert to array or return empty array
+
+  if (contact.name.length < 3) {
+    alert("Name must be at least 3 characters long");
+    return;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(contact.email)) {
+    alert("Please enter a valid email address");
+    return;
+  }
+
+  const phonePattern = /^[0-9]{10}$/;
+
+  if (!phonePattern.test(contact.phone)) {
+    alert("Phone number must contain exactly 10 digits");
+    return;
+  }
+
+  if (contact.message.length < 3) {
+    alert("Message must contain at least 3 characters");
+    return;
+  }
+
   let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 
   contacts.push(contact);
 
-  //convert array -> string
   localStorage.setItem("contacts", JSON.stringify(contacts));
 
   document.getElementById("showName").textContent = contact.name;

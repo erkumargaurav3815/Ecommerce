@@ -144,6 +144,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   document.getElementById("showMessage").textContent = contact.message;
 
   document.getElementById("displayBox").style.display = "flex";
+  document.body.style.overflow = "hidden";
 
   this.reset();
 });

@@ -146,7 +146,13 @@
                         type="text"
                         class="form-control form-control-lg rounded-3"
                         name="name"
-                        placeholder="Enter your name" />
+                        maxlength="30"
+                        placeholder="Enter your name"
+                        pattern="[A-Za-z ]+"
+                        title="Only letters and spaces are allowed"
+                        oninput="
+                          this.value = this.value.replace(/[^A-Za-z ]/g, '')
+                        " />
                     </div>
 
                     <div class="col-md-6">

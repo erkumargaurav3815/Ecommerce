@@ -121,6 +121,9 @@ function closeCard() {
 }
 
 // form
+window.addEventListener("load", () => {
+  document.getElementById("contactForm").reset();
+});
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 

@@ -117,7 +117,7 @@ function closeCard() {
 
   document.getElementById("overlay").classList.add("d-none");
 
-  document.body.style.overflow = "auto";
+  document.body.style.overflow = "hidden";
 }
 
 // form
@@ -130,12 +130,12 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     phone: this.phone.value,
     message: this.message.value,
   };
-  //receive array from local storage or return empty array
+  //receive string from local storage and convert to array or return empty array
   let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 
   contacts.push(contact);
 
-  //convert array -> json
+  //convert array -> string
   localStorage.setItem("contacts", JSON.stringify(contacts));
 
   document.getElementById("showName").textContent = contact.name;

@@ -117,13 +117,10 @@ function closeCard() {
 
   document.getElementById("overlay").classList.add("d-none");
 
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow = "auto";
 }
 
 // form
-window.addEventListener("load", function () {
-  document.getElementById("contactForm").reset();
-});
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
